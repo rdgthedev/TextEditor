@@ -26,8 +26,6 @@ namespace TextEditor
                 Console.WriteLine(e.Message);
             }
         }
-
-
         public static void Open()
         {
             Console.WriteLine("Digite o nome do arquivo: ");
@@ -74,18 +72,11 @@ namespace TextEditor
 
             Menu.MenuQuestionForTheUser(text);
         }
-
-
-
-
-
         public static void Save(string content)
         {
-
             Console.WriteLine("Digite o nome do arquivo: ");
             string userFileName = Console.ReadLine();
             userFileName = string.Concat(userFileName, ".txt");
-
 
             if (File.Exists(userFileName))
             {
@@ -102,7 +93,6 @@ namespace TextEditor
                     Menu.ShowMenuMain();
                 }
             }
-
             else
             {
                 Console.WriteLine("O arquivo não existe!");
@@ -111,8 +101,6 @@ namespace TextEditor
                 Menu.ShowMenuMain();
             }
         }
-
-
     }
 }
 
